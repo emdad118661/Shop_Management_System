@@ -25,7 +25,7 @@
                 <td>{{$customer->CEMAIL}}</td>
                 <td>{{$customer->CADDRESS}}</td>
                 <td>{{$customer->CPHONE}}</td>
-                <td>{{$customer->CPICTURE}}</td>
+                <td><img src="{{asset('uploads/assets'.$customer->CPICTURE)}}" width="70px" alt="image"></td>
             </tr>
         </tbody>
             @endforeach

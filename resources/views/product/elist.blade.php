@@ -34,7 +34,7 @@
                 <td>{{$product->PSTOCK}}</td>
                 <td>{{$product->PDISCOUNT}}</td>
                 <td>{{$product->PDESCRIPTION}}</td>
-                <td>{{$product->PPICTURE}}</td>
+                <td><img src="{{asset('uploads/assets'.$product->PPICTURE)}}" width="70px" alt="image"></td>
                 <td>{{$product->RATING}}</td>
                 <td>{{$product->REVIEW}}</td>
                 <td>{{$product->PSHOP}}</td>
