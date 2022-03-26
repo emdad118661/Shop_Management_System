@@ -39,3 +39,4 @@ Route::get('/voucher/edelete/{VOUID}', [EvoucherController::class, 'delete'])->n
 
 //voucher post
 Route::post('/voucher/edit', [EvoucherController::class,'editSubmit'])->name('vouedit.submit');
+Route::post('/voucher/create', [EvoucherController::class,'addSubmit'])->name('voucreate.submit');
