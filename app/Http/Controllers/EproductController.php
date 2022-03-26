@@ -43,4 +43,11 @@ class EproductController extends Controller
         $pr->save();
         return "<h1>form updated!</h1>";
     }
+    public function search(Request $req){
+        if($req->isMethod('post')){
+            $PNAME =$req->get('PNAME');
+            $products = Product::where('PNAME','LIKE','%'.$PNAME.'%')->paginate(5);
+        }
+        return view('product.elist', compact('products'));
+    }
 }

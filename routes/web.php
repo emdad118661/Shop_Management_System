@@ -20,9 +20,12 @@ Route::get('/', function () {
     return view('home/eIndex');
 });
 
-// customer 
+// customer get
 Route::get('/customer/elist',[EcustomerController::class,'list'])->name('customer.elist');
 Route::get('/customer/details/{id}',[EcustomerController::class,'details'])->name('customer.details');
+
+// customer post
+Route::post('search-record',[EcustomerController::class,'search']);
 
 //product get
 Route::get('/product/elist',[EproductController::class,'list'])->name('product.elist');
@@ -30,6 +33,7 @@ Route::get('/product/emedit/{PID}', [EproductController::class,'edit'])->name('p
 
 //product post
 Route::post('/product/edit', [EproductController::class,'editSubmit'])->name('edit.submit');
+Route::post('search-product',[EproductController::class,'search']);
 
 //voucher get
 Route::get('/voucher/elist',[EvoucherController::class,'list'])->name('voucher.elist');
@@ -40,3 +44,4 @@ Route::get('/voucher/edelete/{VOUID}', [EvoucherController::class, 'delete'])->n
 //voucher post
 Route::post('/voucher/edit', [EvoucherController::class,'editSubmit'])->name('vouedit.submit');
 Route::post('/voucher/create', [EvoucherController::class,'addSubmit'])->name('voucreate.submit');
+

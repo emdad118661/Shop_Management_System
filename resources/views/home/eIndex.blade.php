@@ -14,7 +14,8 @@
     <li>Product Management</li>
     <li>View Customer Details</li>
     <li>View Order Details</li>
-    <!-- <li></li> -->
+    <li>Vouchar Management</li>
+    <li>Search Customer & Product</li>
 </ul>
 <p class="text-center">Let's get into work, All the best!!</p>
 </div>

@@ -17,4 +17,11 @@ class EcustomerController extends Controller
         // return $customer->orders;
         return view('customer.details')->with('customer',$customer);
     }
+    public function search(Request $req){
+        if($req->isMethod('post')){
+            $CNAME =$req->get('CNAME');
+            $customers = Customer::where('CNAME','LIKE','%'.$CNAME.'%')->paginate(5);
+        }
+        return view('customer.elist', compact('customers'));
+    }
 }

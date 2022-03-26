@@ -1,6 +1,11 @@
 @extends('layout.eApp')
 @section('content')
 <h1 class="text-center">Product</h1>
+<form class="mb-2" action="{{url('/search-product')}}" method="post">
+    {{csrf_field()}}
+<input type="text" placeholder="Search by Product Name" name="PNAME">
+<input class="btn btn-info"type="submit" value="Search">
+</form>
 <table class="table table-info table-striped">
         <thead>
             <tr>
