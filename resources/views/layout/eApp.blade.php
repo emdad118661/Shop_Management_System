@@ -27,7 +27,7 @@
           <a class="nav-link active" aria-current="page" href="/product/elist">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Voucher</a>
+          <a class="nav-link active" aria-current="page" href="{{route('voucher.elist')}}">Voucher</a>
         </li>
         <li class="nav-item ms-auto">
           <a class="nav-link active" aria-current="page" href="#">Logout</a>
