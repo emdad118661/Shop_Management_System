@@ -37,7 +37,7 @@
   </div>
 </nav>
     </header>
-    <main>
+    <main class="mx-5 my-2">
     @yield('content')
     </main>
     <footer class="text-center bg-info p-3">

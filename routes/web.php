@@ -28,8 +28,14 @@ Route::get('/customer/details/{id}',[EcustomerController::class,'details'])->nam
 Route::get('/product/elist',[EproductController::class,'list'])->name('product.elist');
 Route::get('/product/emedit/{PID}', [EproductController::class,'edit'])->name('product.emedit');
 
-//product edit
+//product post
 Route::post('/product/edit', [EproductController::class,'editSubmit'])->name('edit.submit');
 
-//voucher
+//voucher get
 Route::get('/voucher/elist',[EvoucherController::class,'list'])->name('voucher.elist');
+Route::get('/voucher/ecreate', [EvoucherController::class,'create'])->name('voucher.ecreate');
+Route::get('/voucher/emedit/{VOUID}', [EvoucherController::class,'edit'])->name('voucher.emedit');
+Route::get('/voucher/edelete/{VOUID}', [EvoucherController::class, 'delete'])->name('voucher.edelete');
+
+//voucher post
+Route::post('/voucher/edit', [EvoucherController::class,'editSubmit'])->name('vouedit.submit');
